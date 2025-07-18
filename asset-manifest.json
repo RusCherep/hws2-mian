@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/RusCherep/hws2-mian/static/css/main.7a9e1bfd.css",
-    "main.js": "/RusCherep/hws2-mian/static/js/main.ab3f4822.js",
-    "static/js/787.66cb4309.chunk.js": "/RusCherep/hws2-mian/static/js/787.66cb4309.chunk.js",
-    "static/media/avatar.png": "/RusCherep/hws2-mian/static/media/avatar.d947cb9d0d13765666b6.png",
-    "index.html": "/RusCherep/hws2-mian/index.html",
-    "main.7a9e1bfd.css.map": "/RusCherep/hws2-mian/static/css/main.7a9e1bfd.css.map",
-    "main.ab3f4822.js.map": "/RusCherep/hws2-mian/static/js/main.ab3f4822.js.map",
-    "787.66cb4309.chunk.js.map": "/RusCherep/hws2-mian/static/js/787.66cb4309.chunk.js.map"
+    "main.css": "/hws2-mian/static/css/main.7a9e1bfd.css",
+    "main.js": "/hws2-mian/static/js/main.d80e5c8f.js",
+    "static/js/787.66cb4309.chunk.js": "/hws2-mian/static/js/787.66cb4309.chunk.js",
+    "static/media/avatar.png": "/hws2-mian/static/media/avatar.d947cb9d0d13765666b6.png",
+    "index.html": "/hws2-mian/index.html",
+    "main.7a9e1bfd.css.map": "/hws2-mian/static/css/main.7a9e1bfd.css.map",
+    "main.d80e5c8f.js.map": "/hws2-mian/static/js/main.d80e5c8f.js.map",
+    "787.66cb4309.chunk.js.map": "/hws2-mian/static/js/787.66cb4309.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7a9e1bfd.css",
-    "static/js/main.ab3f4822.js"
+    "static/js/main.d80e5c8f.js"
   ]
 }
