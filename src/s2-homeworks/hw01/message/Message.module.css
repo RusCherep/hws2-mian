@@ -1,0 +1,92 @@
+.message {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 24px 0;
+
+    text-align: right;
+    position: relative;
+}
+
+.imageAndText {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    gap:15px;
+    z-index: 1;
+
+}
+
+.imageAndText img {
+    width: 48px;
+    height: 48px;
+}
+
+.text {
+    font: 400 16px "Montserrat", sans-serif;
+    color: #fff;
+
+    background-color: #0066CC;
+    border-radius: 10px 10px 0 ;
+
+    padding: 10px 15px;
+    position: relative;
+}
+
+.text:after {
+    /*content: '';*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: -10px;*/
+    /*width: 120%;*/
+    /*height: 120%;*/
+    /*background-image: url('../Rectangle 3.svg');*/
+    /*background-size: 100% 100%;*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
+    /*z-index: -1;*/
+
+}
+
+
+/*.text {*/
+/*    font: 400 16px "Montserrat", sans-serif;*/
+/*    color: #fff;*/
+/*    position: relative;*/
+/*    display: inline-block;*/
+/*    padding: 12px 20px;*/
+/*    margin-left: 10px;*/
+/*    z-index: 1;*/
+/*}*/
+
+/*.text::after {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    background-image: url('../Rectangle 3.svg');*/
+/*    background-size: 200% 200%;*/
+/*    background-repeat: no-repeat;*/
+/*    z-index: -1;*/
+/*}*/
+
+.name {
+    font: 600 18px "Montserrat", sans-serif;
+    color: #fff;
+
+}
+
+.messageText {
+
+}
+
+.time {
+    position: absolute;
+    bottom: 10px;
+    right: 11px;
+
+    font: 600 10px "Montserrat", sans-serif;
+    color: #000;
+}
