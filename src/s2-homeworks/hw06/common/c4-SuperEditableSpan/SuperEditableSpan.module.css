@@ -1,11 +1,23 @@
 .spanBlock {
+    /*display: flex;*/
+    /*align-items: center;*/
+    font: 500 16px "Montserrat", sans-serif;
+    color: #0080ff;
 }
 
 .span {
+
 }
 
 .input {
+    /*display: flex;*/
+    /*align-items: flex-start;*/
+    text-align: left;
+    padding:  0 20px;
+    font: 500 16px "Montserrat", sans-serif;
+    color: #000;
 }
 
 .pen {
+    margin-right: 10px;
 }

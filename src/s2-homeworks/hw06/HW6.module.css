@@ -1,5 +1,12 @@
 .buttonsContainer {
+    display: flex;
+    gap: 10px;
 }
 
 .editableSpanContainer {
+    display: flex;
+    align-items: flex-start;
+    padding: 25px 0;
+    font: 500 16px "Montserrat", sans-serif;
+    color: #0080ff;
 }
