@@ -1,2 +1,7 @@
 .container {
+    display: flex;
+    gap: 100px;
+
+    font: 400 16px "Montserrat", sans-serif;
+    color: #000;
 }
