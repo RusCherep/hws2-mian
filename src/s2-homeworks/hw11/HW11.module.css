@@ -1,8 +1,22 @@
 .container {
+    display: flex;
+    min-width: 150px;
+    max-width: 400px;
+    flex-direction: column;
 }
 
 .wrapper {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
 }
 
 .number {
+    box-sizing: border-box; /* padding включается в ширину */
+    flex: 0 0 60px; /* Общая ширина с учетом padding */
+    text-align: center;
+    padding: 0 15px;
+
+    font: 600 16px / 1.25 "Montserrat", sans-serif;
+    color: #000;
 }
