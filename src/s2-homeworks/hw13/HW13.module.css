@@ -1,10 +1,23 @@
 .buttonsContainer {
+    display: flex;
+    gap: 24px;
 }
 
 .responseContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+    padding: 80px;
+
+    font: 500 16px "Montserrat", sans-serif;
+    color: #000;
 }
 
 .imageContainer {
+    display: flex;
+    min-height: 300px;
+    min-width: 300px;
 }
 
 .image {
@@ -14,9 +27,12 @@
 }
 
 .code {
+    font: 500 30px "Montserrat", sans-serif;
+    color: #000;
 }
 
 .text {
+
 }
 .info {
 }
