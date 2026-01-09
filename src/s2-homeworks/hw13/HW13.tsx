@@ -36,9 +36,8 @@ const HW13 = () => {
             .then((res) => {
                 setCode('Код 200!')
                 setImage(success200)
-                setText('...всё ок)\n' +
-                    'код 200 - обычно означает что скорее всего всё ок)')
-                setInfo('')
+                setText('...всё ок)')
+                setInfo('код 200 - обычно означает что скорее всего всё ок)')
 
             })
             .catch((e) => {
@@ -46,23 +45,20 @@ const HW13 = () => {
                     case 500 :
                         setImage(error500)
                         setCode('Ошибка 500!')
-                        setText('эмитация ошибки на сервере \n' +
-                            'ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных)')
-                        setInfo('')
+                        setText('эмитация ошибки на сервере')
+                        setInfo('ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных)')
                         break
                     case 400 :
                         setImage(error400)
                         setCode('Ошибка 400!')
-                        setText('Ты не отправил success в body вообще!\n' +
-                            'ошибка 400 - обычно означает что скорее всего фронт отправил что-то не то на бэк!')
-                        setInfo('')
+                        setText('Ты не отправил success в body вообще!')
+                        setInfo('ошибка 400 - обычно означает что скорее всего фронт отправил что-то не то на бэк!')
                         break
                     case 0 :
                         setImage(errorUnknown)
                         setCode('Error!')
-                        setText('Network Error \n' +
-                            'AxiosError')
-                        setInfo('')
+                        setText('Network Error')
+                        setInfo('AxiosError')
                         break
                     default :
                         setImage(errorUnknown)
