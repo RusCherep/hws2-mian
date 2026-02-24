@@ -1,9 +1,12 @@
 import React from 'react'
+import iconUp from './images/Polygon 2.svg'
+import iconDown from './images/Polygon 5.svg'
+import iconUpDown from './images/Polygon 6.svg'
 
 // добавить в проект иконки и импортировать
-const downIcon = '[\\/]'
-const upIcon = '[/\\]'
-const noneIcon = '[--]'
+const downIcon = iconDown
+const upIcon = iconUp
+const noneIcon = iconUpDown
 
 export type SuperSortPropsType = {
     id?: string
@@ -14,7 +17,16 @@ export type SuperSortPropsType = {
 
 export const pureChange = (sort: string, down: string, up: string) => {
     // пишет студент, sort: (click) => down (click) => up (click) => '' (click) => down ...
-    return up // исправить
+    switch (sort) {
+        case down:
+            return up;
+        case up:
+            return "";
+        case '':
+            return down;
+        default:
+            return down;
+    }
 }
 
 const SuperSort: React.FC<SuperSortPropsType> = (
@@ -26,6 +38,7 @@ const SuperSort: React.FC<SuperSortPropsType> = (
     const down = '1' + value
 
     const onChangeCallback = () => {
+        // debugger
         onChange(pureChange(sort, down, up))
     }
 
@@ -39,14 +52,25 @@ const SuperSort: React.FC<SuperSortPropsType> = (
         <span
             id={id + '-sort-' + value}
             onClick={onChangeCallback}
+            style={{
+                cursor: 'pointer',
+                display: 'inline-flex',
+                alignItems: 'center',  // вертикальное выравнивание
+                lineHeight: 1          // убираем лишний отступ
+            }}
         >
             {/*сделать иконку*/}
             {/*<img*/}
             {/*    id={id + '-icon-' + sort}*/}
             {/*    src={icon}*/}
+            {/*    style={{width: '16px', height: '16px'}}*/}
             {/*/>*/}
-
-            {icon} {/*а это убрать*/}
+            <img
+                id={id + '-icon-' + sort}
+                src={icon}
+                alt="sort icon"
+                style={{width: '16px', height: '16px'}}
+            />
         </span>
     )
 }

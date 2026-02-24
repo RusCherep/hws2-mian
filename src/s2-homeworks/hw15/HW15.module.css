@@ -1,27 +1,94 @@
-.tech {
-    width: 50vw;
-}
-
-.developer {
-
-}
-
 .techHeader {
     width: 50vw;
+    font: 400 16px / 1.5 "Roboto", sans-serif;
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-left: 10px;
 }
 
 .developerHeader {
-
+    font: 400 16px / 1.5 "Roboto", sans-serif;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
 
 .row {
+    position: relative;
+
     display: flex;
+    max-width: 1200px;
+    align-items: center; /* выравнивание содержимого строк по центру */
+}
+
+.row ::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color:  #e5e5e5;
 }
 
 .rowHeader {
     display: flex;
+    align-items: center;
+    max-width: 1200px;
+
+    background-color: #E5E5E5;
+}
+
+
+.tech {
+    width: 50vw;
+    padding: 10px;
+    font: 400 16px / 1.5 "Roboto", sans-serif;
+    color: #000;
+    display: flex; /* если внутри есть элементы */
+    align-items: center;
+}
+
+.developer {
+    padding: 10px;
+    font: 400 16px / 1.5 "Roboto", sans-serif;
+    color: #000;
+    display: flex; /* если внутри есть элементы */
+    align-items: center;
+    justify-content: center;
+}
+
+.loadingOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7); /* полупрозрачный белый фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
 .loading {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #E0E0E0;
+    border-top: 5px solid #1E88E5;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
 
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }

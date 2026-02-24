@@ -10,7 +10,9 @@ import SuperSort from './common/c10-SuperSort/SuperSort'
 * 1 - дописать SuperPagination
 * 2 - дописать SuperSort
 * 3 - проверить pureChange тестами
+*
 * 3 - дописать sendQuery, onChangePagination, onChangeSort в HW15
+*
 * 4 - сделать стили в соответствии с дизайном
 * 5 - добавить HW15 в HW5/pages/JuniorPlus
 * */
@@ -41,38 +43,54 @@ const getTechs = (params: ParamsType) => {
 const HW15 = () => {
     const [sort, setSort] = useState('')
     const [page, setPage] = useState(1)
-    const [count, setCount] = useState(4)
+    const [count, setCount] = useState(7)
     const [idLoading, setLoading] = useState(false)
     const [totalCount, setTotalCount] = useState(100)
     const [searchParams, setSearchParams] = useSearchParams()
     const [techs, setTechs] = useState<TechType[]>([])
 
-    const sendQuery = (params: any) => {
+    const sendQuery = (params: ParamsType) => {
         setLoading(true)
         getTechs(params)
             .then((res) => {
                 // делает студент
-
+                if (res) {
+                    setTotalCount(res.data.totalCount)
+                    setTechs(res.data.techs)
+                }
                 // сохранить пришедшие данные
 
                 //
-            })
+            }).finally(()=>{
+            setLoading(false)
+        })
     }
 
     const onChangePagination = (newPage: number, newCount: number) => {
+
         // делает студент
+
+        setPage(newPage)
+        setCount(newCount)
+
+        sendQuery({sort, page: newPage, count: newCount})
+        setSearchParams({page: `${newPage}`, count: `${newCount}`})
 
         // setPage(
         // setCount(
 
         // sendQuery(
         // setSearchParams(
-
-        //
     }
 
     const onChangeSort = (newSort: string) => {
         // делает студент
+        setSort(newSort)
+        setPage(1)
+
+
+        sendQuery({sort: newSort, page, count})
+        setSearchParams({page: `${page}`, count: `${count}`})
 
         // setSort(
         // setPage(1) // при сортировке сбрасывать на 1 страницу
@@ -85,7 +103,7 @@ const HW15 = () => {
 
     useEffect(() => {
         const params = Object.fromEntries(searchParams)
-        sendQuery({page: params.page, count: params.count})
+        sendQuery({page: Number(params.page), count: Number(params.count), sort})
         setPage(+params.page || 1)
         setCount(+params.count || 4)
     }, [])
@@ -106,8 +124,10 @@ const HW15 = () => {
         <div id={'hw15'}>
             <div className={s2.hwTitle}>Homework #15</div>
 
-            <div className={s2.hw}>
-                {idLoading && <div id={'hw15-loading'} className={s.loading}>Loading...</div>}
+            <div className={s2.hw} style={{ position: 'relative' }}>
+                {idLoading && (<div className={s.loadingOverlay}>
+                <div id={'hw15-loading'} className={s.loading}/>
+                </div>)}
 
                 <SuperPagination
                     page={page}

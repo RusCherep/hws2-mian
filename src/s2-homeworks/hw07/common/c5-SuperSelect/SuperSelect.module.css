@@ -1,6 +1,7 @@
 .select {
     min-height: 25px;
-    min-width: 180px;
+    min-width: 30px;
+
     font: 400 14px "Montserrat", sans-serif;
     color: #000;
 
@@ -10,7 +11,7 @@
 
     border: 1px solid #c2c2c2;
     border-radius: 2px;
-    width: 165px;
+    /*width: 165px;*/
     height: 24px;
 }
 
@@ -18,7 +19,7 @@
 
     border: 1px solid #000;
     border-radius: 2px;
-    width: 180px;
+    /*width: 180px;*/
     height: 25px;
 }
 
