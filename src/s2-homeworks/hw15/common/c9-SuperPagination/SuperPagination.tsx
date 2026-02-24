@@ -1,4 +1,4 @@
-import React, {BaseSyntheticEvent, ChangeEvent} from 'react'
+import React, {ChangeEvent} from 'react'
 import SuperSelect from '../../../hw07/common/c5-SuperSelect/SuperSelect'
 import {Pagination} from '@mui/material'
 import s from './SuperPagination.module.css'
