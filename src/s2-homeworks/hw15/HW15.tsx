@@ -24,7 +24,7 @@ type TechType = {
 }
 
 type ParamsType = {
-    sort: string
+    sort?: string
     page: number
     count: number
 }
@@ -103,7 +103,7 @@ const HW15 = () => {
 
     useEffect(() => {
         const params = Object.fromEntries(searchParams)
-        sendQuery({page: Number(params.page), count: Number(params.count), sort})
+        sendQuery({page: Number(params.page), count: Number(params.count)})
         setPage(+params.page || 1)
         setCount(+params.count || 4)
     }, [])
